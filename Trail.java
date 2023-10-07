@@ -1,30 +1,26 @@
-public class Trail{
-    public static void main(String[] args) {
-       int grade = 90
-       ;
+import java.util.Scanner;
 
-switch (grade) {
-  case 90:
-    System.out.println("You got an A!");
-    break;
-  case 80:
-    System.out.println("You got a B!");
-    break;
-  case 70:
-    System.out.println("You got a C!");
-    break;
-  case 60:
-    System.out.println("You got a D!");
-    break;
-  default:
-    System.out.println("You failed!");
-} 
+public class Trail {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter your marks: ");
+    int marks = input.nextInt();
+
+    char Marks = Allmarks(marks);
+    System.out.println("The grade is " + Marks);
+    input.close();
+  }
+
+  public static char Allmarks(int marks) {
+    switch (marks / 10) {
+      case 10:
+        return 'C';
+      case 9:
+        return 'B';
+      default:
+        return 'A';
     }
+
+  }
 }
-
-
-
-
-
-
-
